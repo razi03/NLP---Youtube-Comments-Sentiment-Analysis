@@ -12,22 +12,23 @@ Classify YouTube comments as either `positive` or `negative` using simple and li
 - **Visualization**: `matplotlib`, `seaborn`
 - **NLP**: `nltk`, `spacy`
 - **Machine Learning**: `scikit-learn`
+- **Environment**: Jupyter Notebook
 
 ## 📁 Project Structure
 
 ```
 youtube-comments-sentiment-analysis/
-├── youtube_sentiment.py          # Main Python script
-├── YoutubeCommentsDataSet.csv    # Original dataset with comments and labels
-├── requirements.txt              # Python dependencies
-└── README.md                     # This file
+├── youtube_sentiment_from_script.ipynb  # Main Jupyter notebook
+├── YoutubeCommentsDataSet.csv           # Original dataset with comments and labels
+├── requirements.txt                     # Python dependencies
+└── README.md                           # This file
 ```
 
 ## 🚀 Quick Start
 
 ### Prerequisites
 
-Make sure you have Python 3.7+ installed.
+Make sure you have Python 3.7+ and Jupyter installed.
 
 ### Installation
 
@@ -38,26 +39,30 @@ Make sure you have Python 3.7+ installed.
    pip install -r requirements.txt
    ```
 
-3. **Run the analysis**:
+3. **Launch Jupyter**:
    ```bash
-   python youtube_sentiment.py
+   jupyter notebook
    ```
 
-## 📊 What the Script Does
+4. **Open the notebook**:
+   - Navigate to `youtube_sentiment_from_script.ipynb`
+   - Run all cells sequentially
 
-The script performs a complete sentiment analysis pipeline:
+## 📊 What the Notebook Does
 
-1. **Data Loading**: Loads the YouTube comments dataset
-2. **Data Inspection**: Shows basic statistics and class distribution
-3. **Text Preprocessing**: 
+The notebook performs a complete sentiment analysis pipeline:
+
+1. **Setup & Installation**: Installs and downloads required libraries and models
+2. **Data Loading**: Loads the YouTube comments dataset
+3. **Data Inspection**: Shows basic statistics and class distribution
+4. **Text Preprocessing**: 
    - Lowercasing
    - Removing punctuation
    - Removing stopwords
    - Lemmatization using SpaCy
-4. **Feature Extraction**: TF-IDF vectorization
-5. **Model Training**: Logistic Regression classifier
-6. **Evaluation**: Accuracy, confusion matrix, classification report
-7. **Feature Analysis**: Visualizes important words for each sentiment
+5. **Feature Extraction**: TF-IDF vectorization
+6. **Model Training**: Logistic Regression classifier
+7. **Evaluation**: Accuracy, confusion matrix, classification report
 8. **Testing**: Tests the model on new sample comments
 
 ## 📦 Dataset
@@ -66,16 +71,15 @@ The `YoutubeCommentsDataSet.csv` file contains:
 - **Comment**: The YouTube comment text
 - **Sentiment**: Label (`positive`, `negative`, or `neutral`)
 
-The script automatically filters to binary classification (positive/negative only) for sentiment analysis.
+The notebook automatically filters to binary classification (positive/negative only) for sentiment analysis.
 
 ## 📈 Expected Output
 
-The script will show:
+The notebook will show:
 - Dataset statistics and visualizations
 - Text preprocessing examples
-- Model performance metrics
+- Model performance metrics (88.68% accuracy achieved)
 - Confusion matrix plot
-- Feature importance plots
 - Predictions on test comments
 
 ## 🎓 Educational Value
@@ -85,22 +89,32 @@ This project demonstrates:
 - Text vectorization with TF-IDF
 - Simple machine learning classification
 - Model evaluation and interpretation
-- Feature importance analysis
+- Interactive Jupyter notebook workflow
 
 ## 🔧 Customization
 
-You can easily modify the script to:
+You can easily modify the notebook to:
 - Use your own dataset
 - Try different preprocessing steps
 - Experiment with other ML algorithms
 - Adjust model parameters
+- Add more visualizations
 
 ## 📝 Notes
 
-- The script automatically downloads required NLTK and SpaCy data
-- All plots are displayed using matplotlib
-- The model achieves good accuracy on the balanced dataset
+- The notebook automatically downloads required NLTK and SpaCy data
+- All plots are displayed inline in the notebook
+- The model achieves 88.68% accuracy on the real YouTube comments dataset
 - The code is well-commented for educational purposes
+- Each cell can be run independently for experimentation
+
+## 🚀 Performance Results
+
+- **Dataset Size**: 18,408 total comments (filtered to 13,739 for binary classification)
+- **Model Accuracy**: 88.68%
+- **Training Set**: 10,991 samples
+- **Test Set**: 2,748 samples
+- **Class Distribution**: 11,402 positive, 2,337 negative
 
 ## 🤝 Contributing
 
