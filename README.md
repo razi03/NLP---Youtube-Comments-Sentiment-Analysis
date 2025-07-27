@@ -82,6 +82,24 @@ The notebook will show:
 - Confusion matrix plot
 - Predictions on test comments
 
+### 🎯 Model Evaluation Results
+
+![Model Evaluation Results](model_results.png)
+
+*Confusion Matrix and Classification Report showing 88.68% accuracy on YouTube comments sentiment analysis*
+
+#### 📊 Key Performance Metrics:
+- **Overall Accuracy**: 88.68%
+- **True Positives**: 2,262 (positive comments correctly identified)
+- **True Negatives**: 175 (negative comments correctly identified)
+- **False Positives**: 292 (negative comments misclassified as positive)
+- **False Negatives**: 19 (positive comments misclassified as negative)
+
+#### 🎯 Classification Report:
+- **Positive Class**: 99% recall, 89% precision, 94% F1-score
+- **Negative Class**: 37% recall, 90% precision, 53% F1-score
+- **Test Set Size**: 2,748 samples (2,281 positive, 467 negative)
+
 ## 🎓 Educational Value
 
 This project demonstrates:
